@@ -1,0 +1,12 @@
+{
+	"title"		:	"TFT TTT Weapon Pack",
+	"type"		:	"weapon",
+	"tags"		:	[ "fun" ],
+	"ignore"	:
+	[
+		"*.md",
+		"*.pdn",
+        ".git*",
+        "TFT_TTT_Weapons.jpg"
+	]
+}

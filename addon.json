@@ -6,7 +6,8 @@
 	[
 		"*.md",
 		"*.pdn",
-        ".git*",
+		".git*",
+		"LICENSE",
         "TFT_TTT_Weapons.jpg"
 	]
 }

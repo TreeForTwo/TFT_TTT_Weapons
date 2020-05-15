@@ -169,8 +169,8 @@ function SWEP:GetHeadshotMultiplier(victim, dmginfo)
    local dist = victim:GetPos():Distance(att:GetPos())
    local d = math.max(0, dist - 140)
 
-   -- decay from 3.1 to 1 slowly as distance increases
-   return 1 + math.max(0, (2.1 - 0.002 * (d ^ 1.25)))
+   -- decay from 2.1 to 1 slowly as distance increases
+   return 1 + math.max(0, (1.1 - 0.001 * (d ^ 1.25)))
 end
 
 function SWEP:SecondaryAttack()

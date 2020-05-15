@@ -58,3 +58,14 @@ function SWEP:WasBought(buyer)
       buyer:GiveAmmo( 25, "AR2AltFire" )
    end
 end
+
+function SWEP:GetHeadshotMultiplier(victim, dmginfo)
+   local att = dmginfo:GetAttacker()
+   if not IsValid(att) then return 2 end
+
+   local dist = victim:GetPos():Distance(att:GetPos())
+   local d = math.max(0, dist - 150)
+
+   -- decay from 3.2 to 1.7
+   return 1.7 + math.max(0, (1.5 - 0.002 * (d ^ 1.25)))
+end
